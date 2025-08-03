@@ -17,7 +17,8 @@ const Projects = () => {
       ],
       technologies: ["React Native", "Voice Recognition API", "Camera API", "Email Integration"],
       category: "Mobile App",
-      color: "from-red-400 to-pink-400"
+      color: "from-red-400 to-pink-400",
+      githubLink: "https://github.com/bhavani-2710/resQall"
     },
     {
       title: "Personalized News Aggregator",
@@ -32,7 +33,8 @@ const Projects = () => {
       ],
       technologies: ["React.js", "News API", "Machine Learning", "Local Storage"],
       category: "Web App",
-      color: "from-blue-400 to-cyan-400"
+      color: "from-blue-400 to-cyan-400",
+      githubLink: "https://github.com/bhavani-2710/Personalized-News-Aggregator"
     },
     {
       title: "Aptitude Portal",
@@ -47,7 +49,8 @@ const Projects = () => {
       ],
       technologies: ["React.js", "PHP", "MySQL", "AI Algorithms"],
       category: "Learning Platform",
-      color: "from-purple-400 to-indigo-400"
+      color: "from-purple-400 to-indigo-400",
+      githubLink: "https://github.com/jaypatelll1/csi-aptitude-portal"
     }
   ];
 
@@ -126,6 +129,7 @@ const Projects = () => {
                         variant="outline" 
                         size="sm"
                         className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                        onClick={() => window.open(project.githubLink, '_blank')}
                       >
                         <Github className="w-4 h-4 mr-2" />
                         View Code
