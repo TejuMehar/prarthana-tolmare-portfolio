@@ -28,8 +28,7 @@ const Experience = () => {
         "Implemented various ML algorithms from scratch",
         "Worked with Python libraries (NumPy, Pandas, Scikit-learn)",
         "Explored Google Cloud Platform services",
-        "Completed real-world data analysis projects",
-        "Developed predictive models and data visualizations"
+        "Completed real-world data analysis projects"
       ]
     }
   ];

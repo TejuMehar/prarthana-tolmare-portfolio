@@ -54,7 +54,7 @@ const About = () => {
           {/* About Content */}
           <div className="animate-slide-in-left">
             <h3 className="text-2xl font-bold text-foreground mb-6">
-              Aditi Ashok Yadav
+              Aditi Yadav
             </h3>
             
             <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -73,8 +73,7 @@ const About = () => {
               
               <p>
                 Currently pursuing my B.Tech in Computer Science (graduating in 2027), I'm 
-                constantly exploring new technologies and methodologies. My curiosity leads me 
-                to ask "why" and "how can we do this better?" in every project I undertake.
+                constantly exploring new technologies and methodologies.
               </p>
               
               <p>

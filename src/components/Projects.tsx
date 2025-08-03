@@ -130,13 +130,6 @@ const Projects = () => {
                         <Github className="w-4 h-4 mr-2" />
                         View Code
                       </Button>
-                      <Button 
-                        size="sm"
-                        className="bg-primary hover:bg-primary-hover text-primary-foreground"
-                      >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Live Demo
-                      </Button>
                     </div>
                   </div>
                 </div>
