@@ -177,21 +177,6 @@ const Contact = () => {
               </div>
             </Card>
 
-            {/* Resume Download */}
-            <Card className="p-6 bg-card border-border">
-              <h4 className="font-semibold text-foreground mb-3">
-                Want to know more?
-              </h4>
-              <p className="text-muted-foreground text-sm mb-4">
-                Download my resume to get a detailed overview of my experience and skills.
-              </p>
-              <Button 
-                variant="outline"
-                className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-              >
-                Download Resume
-              </Button>
-            </Card>
           </div>
         </div>
       </div>
