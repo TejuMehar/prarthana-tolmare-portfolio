@@ -1,6 +1,6 @@
 import { Heart, Users, TrendingUp, Lightbulb } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import aditiProfile from "@/assets/aditi-profile.jpg";
+import khushiProfile from "@/assets/khushi-profile.jpg";
 
 const About = () => {
   const values = [
@@ -43,8 +43,8 @@ const About = () => {
           <div className="flex justify-center animate-fade-in">
             <div className="relative">
               <img
-                src={aditiProfile}
-                alt="Aditi Ashok Yadav"
+                src={khushiProfile}
+                alt="Aditi Yadav"
                 className="w-80 h-80 rounded-2xl object-cover shadow-xl"
               />
               <div className="absolute -z-10 inset-2 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl blur-xl"></div>
