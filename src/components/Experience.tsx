@@ -59,15 +59,20 @@ const Experience = () => {
                 style={{ animationDelay: `${index * 0.3}s` }}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background z-10"></div>
+                <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background z-10 animate-pulse hover:scale-125 transition-transform duration-300">
+                  <div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75"></div>
+                </div>
 
                 {/* Content */}
                 <Card
-                  className={`w-full md:w-5/12 ml-12 md:ml-0 p-6 bg-card border-border hover:shadow-lg transition-all duration-300 ${
+                  className={`w-full md:w-5/12 ml-12 md:ml-0 p-6 bg-card border-border hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 group relative overflow-hidden ${
                     index % 2 === 0 ? 'md:mr-auto md:ml-0' : 'md:ml-auto md:mr-0'
                   }`}
                 >
-                  <div className="flex items-start justify-between mb-4">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-bold text-foreground mb-1">
                         {exp.title}
@@ -119,6 +124,7 @@ const Experience = () => {
                         </li>
                       ))}
                     </ul>
+                  </div>
                   </div>
                 </Card>
               </div>

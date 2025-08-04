@@ -62,11 +62,13 @@ const Hero = () => {
 
           {/* Right Content - Profile Image */}
           <div className="flex justify-center lg:justify-end animate-fade-in">
-            <div className="relative">
-              <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl animate-float">
-                <img src={khushiProfile} alt="Aditi Yadav" className="w-full h-full object-cover" />
+            <div className="relative group">
+              <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-gradient-to-r from-primary via-secondary to-primary shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-primary/50">
+                <img src={khushiProfile} alt="Aditi Yadav" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
               </div>
-              <div className="absolute -z-10 inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-xl"></div>
+              <div className="absolute -z-10 inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full blur-xl transition-all duration-500 group-hover:blur-2xl group-hover:scale-110"></div>
+              <div className="absolute -inset-2 rounded-full border-2 border-primary/30 animate-pulse"></div>
+              <div className="absolute -inset-4 rounded-full border border-secondary/20 animate-pulse" style={{animationDelay: '0.5s'}}></div>
             </div>
           </div>
         </div>
