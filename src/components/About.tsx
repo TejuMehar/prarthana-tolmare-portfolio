@@ -45,11 +45,8 @@ const About = () => {
               <img
                 src={khushiProfile}
                 alt="Aditi Yadav"
-                className="w-80 h-80 rounded-2xl object-cover shadow-xl transition-all duration-500 group-hover:scale-105 group-hover:rotate-2 animate-pulse"
+                className="w-80 h-80 rounded-2xl object-cover shadow-xl border-4 border-primary transition-all duration-500 group-hover:scale-105"
               />
-              <div className="absolute -z-10 inset-2 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-2xl blur-xl transition-all duration-500 group-hover:blur-2xl group-hover:scale-110"></div>
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute -inset-1 bg-gradient-to-br from-primary/20 via-secondary/20 to-primary/20 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
             </div>
           </div>
 
