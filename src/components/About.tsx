@@ -1,6 +1,6 @@
 import { Heart, Users, TrendingUp, Lightbulb } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import khushiProfile from "@/assets/khushi-profile.jpg";
+import profilePicture from "@/assets/profile-picture.jpg";
 
 const About = () => {
   const values = [
@@ -44,7 +44,7 @@ const About = () => {
             <div className="relative group">
               <div className="w-80 h-80 overflow-hidden shadow-xl border-4 border-primary transition-all duration-500 group-hover:scale-105" style={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}>
                 <img
-                  src={khushiProfile}
+                  src={profilePicture}
                   alt="Aditi Yadav"
                   className="w-full h-full object-cover"
                 />
