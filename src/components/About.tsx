@@ -1,6 +1,6 @@
 import { Heart, Users, TrendingUp, Lightbulb } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import khushiProfile from "@/assets/khushi-profile.jpg";
+import profilePicture from "@/assets/profile-picture.jpg";
 
 const About = () => {
   const values = [
@@ -42,11 +42,13 @@ const About = () => {
           {/* Profile Image */}
           <div className="flex justify-center animate-fade-in">
             <div className="relative group">
-              <img
-                src={khushiProfile}
-                alt="Aditi Yadav"
-                className="w-80 h-80 rounded-2xl object-cover shadow-xl border-4 border-primary transition-all duration-500 group-hover:scale-105"
-              />
+              <div className="w-80 h-80 overflow-hidden shadow-xl border-4 border-primary transition-all duration-500 group-hover:scale-105" style={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}>
+                <img
+                  src={profilePicture}
+                  alt="Aditi Yadav"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
 
