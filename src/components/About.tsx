@@ -42,13 +42,14 @@ const About = () => {
           {/* Profile Image */}
           <div className="flex justify-center animate-fade-in">
             <div className="relative group">
-              <div className="w-80 h-80 overflow-hidden shadow-xl border-4 border-primary transition-all duration-500 group-hover:scale-105" style={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}>
+              <div className="w-80 h-80 overflow-hidden shadow-xl border-4 border-primary transition-all duration-500 group-hover:scale-105 group-hover:shadow-primary/50" style={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}>
                 <img
                   src={profilePicture}
                   alt="Aditi Yadav"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
+              <div className="absolute -z-10 inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 blur-xl transition-all duration-500 group-hover:blur-2xl group-hover:scale-110" style={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}></div>
             </div>
           </div>
 
