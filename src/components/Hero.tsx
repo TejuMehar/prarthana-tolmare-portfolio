@@ -1,6 +1,6 @@
 import { ChevronDown, Download, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import khushiProfile from "@/assets/khushi-profile.jpg";
+import aditiProfile from "@/assets/aditi-profile.jpg";
 const Hero = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -64,7 +64,7 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end animate-fade-in">
             <div className="relative group">
               <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-primary/50">
-                <img src={khushiProfile} alt="Aditi Yadav" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={aditiProfile} alt="Aditi Yadav" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
               </div>
               <div className="absolute -z-10 inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full blur-xl transition-all duration-500 group-hover:blur-2xl group-hover:scale-110"></div>
               <div className="absolute -inset-2 rounded-full border-2 border-primary/30 animate-pulse"></div>
