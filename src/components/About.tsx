@@ -1,6 +1,7 @@
 import { Heart, Users, TrendingUp, Lightbulb } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import profilePicture from "@/assets/profile-picture.jpg";
+import MagicalBackground from "./MagicalBackground";
 
 const About = () => {
   const values = [
@@ -27,8 +28,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-6 bg-muted/30">
-      <div className="container mx-auto">
+    <MagicalBackground variant="about" className="py-20 px-6 bg-muted/30">
+      <section id="about" className="w-full">
+        <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             About Me
@@ -41,15 +43,15 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Profile Image */}
           <div className="flex justify-center animate-fade-in">
-            <div className="relative group">
-              <div className="w-80 h-80 overflow-hidden shadow-xl border-4 border-primary transition-all duration-500 group-hover:scale-105 group-hover:shadow-primary/50" style={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}>
+            <div className="relative group sparkle">
+              <div className="w-80 h-80 overflow-hidden glow-effect border-4 border-primary magical-card animate-magical-float" style={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}>
                 <img
                   src={profilePicture}
                   alt="Aditi Yadav"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <div className="absolute -z-10 inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 blur-xl transition-all duration-500 group-hover:blur-2xl group-hover:scale-110" style={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}></div>
+              <div className="absolute -z-10 inset-0 bg-gradient-to-br from-primary/40 to-secondary/40 blur-xl animate-glow-pulse" style={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}></div>
             </div>
           </div>
 
@@ -88,7 +90,7 @@ const About = () => {
             </div>
 
             {/* Education */}
-            <div className="mt-8 p-6 bg-card rounded-lg border border-border">
+            <div className="mt-8 p-6 glassmorphism rounded-lg border border-border/50 magical-card sparkle">
               <h4 className="text-lg font-semibold text-foreground mb-2">Education</h4>
               <p className="text-muted-foreground">
                 <span className="font-medium">B.Tech in Computer Science</span><br />
@@ -107,9 +109,10 @@ const About = () => {
             {values.map((value, index) => (
               <Card
                 key={index}
-                className="p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-card border-border"
+                className="p-6 text-center magical-card glassmorphism border-border/50 sparkle animate-magical-float"
+                style={{animationDelay: `${index * 0.5}s`}}
               >
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 glow-effect">
                   <value.icon className="w-8 h-8 text-primary" />
                 </div>
                 <h4 className="text-lg font-semibold text-foreground mb-2">
@@ -122,8 +125,9 @@ const About = () => {
             ))}
           </div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </MagicalBackground>
   );
 };
 
