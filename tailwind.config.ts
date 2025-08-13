@@ -113,33 +113,6 @@ export default {
 					'50%': {
 						transform: 'translateY(-10px)'
 					}
-				},
-				'magical-float': {
-					'0%, 100%': {
-						transform: 'translateY(0px) rotateZ(0deg)'
-					},
-					'33%': {
-						transform: 'translateY(-10px) rotateZ(1deg)'
-					},
-					'66%': {
-						transform: 'translateY(5px) rotateZ(-1deg)'
-					}
-				},
-				'shimmer': {
-					'0%': {
-						backgroundPosition: '-200% center'
-					},
-					'100%': {
-						backgroundPosition: '200% center'
-					}
-				},
-				'glow-pulse': {
-					'0%, 100%': {
-						boxShadow: '0 0 20px hsl(var(--primary) / 0.3)'
-					},
-					'50%': {
-						boxShadow: '0 0 40px hsl(var(--primary) / 0.6), 0 0 60px hsl(var(--secondary) / 0.4)'
-					}
 				}
 			},
 			animation: {
@@ -147,10 +120,7 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-in-left': 'slide-in-left 0.8s ease-out',
-				'float': 'float 3s ease-in-out infinite',
-				'magical-float': 'magical-float 6s ease-in-out infinite',
-				'shimmer': 'shimmer 2s linear infinite',
-				'glow-pulse': 'glow-pulse 3s ease-in-out infinite'
+				'float': 'float 3s ease-in-out infinite'
 			},
 			fontFamily: {
 				'sans': ['Inter', 'ui-sans-serif', 'system-ui']
