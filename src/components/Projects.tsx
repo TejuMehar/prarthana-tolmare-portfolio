@@ -31,7 +31,7 @@ const Projects = () => {
         "Save for later functionality",
         "Responsive design"
       ],
-      technologies: ["React.js", "News API", "Machine Learning", "Local Storage"],
+      technologies: ["React.js", "Node.js", "MongoDb", "Express", "News API", "Local Storage"],
       category: "Web App",
       color: "from-blue-400 to-cyan-400",
       githubLink: "https://github.com/bhavani-2710/Personalized-News-Aggregator"
@@ -47,7 +47,7 @@ const Projects = () => {
         "Multiple test categories",
         "Real-time scoring"
       ],
-      technologies: ["React.js", "PHP", "MySQL", "AI Algorithms"],
+      technologies: ["React.js", "CSS3", "Javascript(ES6+)", "PHP", "MySQL", "AI Algorithms"],
       category: "Learning Platform",
       color: "from-purple-400 to-indigo-400",
       githubLink: "https://github.com/jaypatelll1/csi-aptitude-portal"
