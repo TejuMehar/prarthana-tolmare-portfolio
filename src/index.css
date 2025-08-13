@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Soft pastel design system for Aditi's portfolio */
+/* Enhanced pastel theme for Aditi's portfolio */
 
 @layer base {
   :root {
-    /* Soft peachy-pink and lavender palette */
+    /* Base Colors - brighter, more saturated */
     --background: 25 35% 98%;
     --foreground: 240 15% 25%;
 
@@ -16,18 +16,20 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 15% 25%;
 
-    /* Warm peachy-pink primary */
-    --primary: 15 85% 75%;
+    /* Enhanced Warm Peach Primary */
+    --primary: 25 95% 72%; /* Warmer peach */
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 15 85% 70%;
+    --primary-hover: 25 95% 65%;
 
-    /* Soft lavender secondary */
-    --secondary: 260 40% 85%;
+    /* Richer Lavender Secondary */
+    --secondary: 270 50% 80%;
     --secondary-foreground: 240 15% 25%;
+    --secondary-hover: 270 50% 75%;
 
-    /* Sage green accent */
-    --accent: 120 25% 80%;
+    /* Eucalyptus Green Accent */
+    --accent: 140 40% 75%;
     --accent-foreground: 240 15% 25%;
+    --accent-hover: 140 40% 70%;
 
     /* Muted tones */
     --muted: 25 20% 95%;
@@ -38,71 +40,73 @@
 
     --border: 25 20% 90%;
     --input: 25 20% 95%;
-    --ring: 15 85% 75%;
+    --ring: 25 95% 72%;
 
-    /* Portfolio-specific colors */
-    --hero-gradient: linear-gradient(135deg, hsl(15 85% 75%) 0%, hsl(260 40% 85%) 100%);
+    /* Gradients using enhanced colors */
+    --hero-gradient: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--secondary)) 50%,
+      hsl(var(--accent)) 100%
+    );
     --skill-bg: 25 20% 98%;
-    --project-hover: 15 65% 90%;
+    --project-hover: 25 80% 90%;
 
     --radius: 0.5rem;
 
+    /* Sidebar */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  /* Dark Mode Enhancements */
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 240 10% 8%;
+    --foreground: 210 40% 96%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 240 10% 10%;
+    --card-foreground: 210 40% 96%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 240 10% 10%;
+    --popover-foreground: 210 40% 96%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 25 95% 72%;
+    --primary-foreground: 240 10% 10%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 270 50% 70%;
+    --secondary-foreground: 240 10% 10%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 140 40% 70%;
+    --accent-foreground: 240 10% 10%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --muted: 240 8% 20%;
+    --muted-foreground: 210 10% 75%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 210 40% 96%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
+    --border: 240 8% 20%;
+    --input: 240 8% 20%;
+    --ring: 25 95% 72%;
+
+    --sidebar-background: 240 8% 12%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent: 240 3.7% 18%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-border: 240 3.7% 18%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
+/* Global Base */
 @layer base {
   * {
     @apply border-border;
@@ -110,5 +114,35 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Component Enhancements */
+@layer components {
+  button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  button:hover {
+    transform: translateY(-2px);
+    background-color: hsl(var(--primary-hover));
+  }
+
+  .card {
+    background-color: hsl(var(--card));
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .card:hover {
+    background-color: hsl(var(--project-hover));
+    transform: scale(1.02);
+  }
+
+  /* Color-Shift Animations */
+  .color-shift {
+    animation: hueShift 8s ease-in-out infinite;
+  }
+  @keyframes hueShift {
+    0% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(15deg); }
+    100% { filter: hue-rotate(0deg); }
   }
 }
