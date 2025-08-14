@@ -119,10 +119,38 @@
 
 /* Component Enhancements */
 @layer components {
-  button {
+  /* Navigation buttons - text-only hover effect */
+  .nav-button {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-button:hover {
+    color: hsl(var(--primary));
+  }
+  
+  .nav-button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    background-color: hsl(var(--primary));
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .nav-button:hover::after {
+    width: 100%;
+  }
+
+  /* UI buttons - preserve original hover effects */
+  .ui-button {
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
-  button:hover {
+  
+  .ui-button:hover {
     transform: translateY(-2px);
     background-color: hsl(var(--primary-hover));
   }
