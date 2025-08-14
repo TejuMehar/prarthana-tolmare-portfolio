@@ -74,7 +74,7 @@ const About = () => {
               </p>
               
               <p>
-                Currently pursuing my B.Tech in Computer Science (graduating in 2027), I'm 
+                Currently pursuing my B.E in Computer Science (graduating in 2027), I'm 
                 constantly exploring new technologies and methodologies.
               </p>
               
@@ -91,7 +91,7 @@ const About = () => {
             <div className="mt-8 p-6 bg-card rounded-lg border border-border">
               <h4 className="text-lg font-semibold text-foreground mb-2">Education</h4>
               <p className="text-muted-foreground">
-                <span className="font-medium">B.Tech in Computer Science</span><br />
+                <span className="font-medium">B.E in Computer Science</span><br />
                 Expected Graduation: 2027
               </p>
             </div>
