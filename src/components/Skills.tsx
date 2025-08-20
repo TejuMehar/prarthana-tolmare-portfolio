@@ -40,7 +40,9 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-6">
+    <section id="skills" className="relative min-h-screen flex items-center pt-20 px-6 
+      bg-gradient-to-b from-[#f8f4ff] via-[#edd7c9]
+      dark:from-[#7198cf] dark:via-[#1e293b] dark:to-[#7198cf]">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
