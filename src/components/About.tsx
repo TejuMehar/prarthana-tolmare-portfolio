@@ -7,30 +7,35 @@ const About = () => {
     {
       icon: Lightbulb,
       title: "Curious Thinker",
-      description: "Always asking 'why' and 'how can we do this better?'"
+      description: "Always asking 'why' and 'how can we do this better?'",
     },
     {
       icon: Users,
       title: "Team Player",
-      description: "Believes in the power of collaboration and diverse perspectives"
+      description:
+        "Believes in the power of collaboration and diverse perspectives",
     },
     {
       icon: TrendingUp,
       title: "Growth Oriented",
-      description: "Continuously learning and adapting to new challenges"
+      description: "Continuously learning and adapting to new challenges",
     },
     {
       icon: Heart,
       title: "Good Human First",
-      description: "Values kindness, empathy, and meaningful connections"
-    }
+      description: "Values kindness, empathy, and meaningful connections",
+    },
   ];
 
   return (
-    <section id="about" className="relative min-h-screen flex items-center pt-20 px-6 
-      bg-gradient-to-b from-[#f8f4ff] via-[#edd7c9]
-      dark:from-[#7198cf] dark:via-[#1e293b] dark:to-[#7198cf]">
-      <div className="container mx-auto">
+    <section
+      id="about"
+      className="relative py-24 px-6 bg-gradient-to-b 
+      from-[#f8f4ff] via-[#edd7c9]/60 to-[#f8f4ff]
+      dark:from-[#7198cf] dark:via-[#1e293b] dark:to-[#7198cf]"
+    >
+      <div className="container mx-auto max-w-6xl">
+        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             About Me
@@ -40,60 +45,72 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        {/* Profile + Bio */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Profile Image */}
-          <div className="flex justify-center animate-fade-in">
+          <div className="flex justify-center">
             <div className="relative group">
-              <div className="w-80 h-80 overflow-hidden shadow-xl border-4 border-primary transition-all duration-500 group-hover:scale-105 group-hover:shadow-primary/50" style={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}>
+              <div
+                className="w-72 h-72 md:w-80 md:h-80 overflow-hidden shadow-xl border-4 border-primary transition-all duration-500 group-hover:scale-105 group-hover:shadow-primary/50 rounded-xl"
+              >
                 <img
                   src={profilePicture}
                   alt="Aditi Yadav"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <div className="absolute -z-10 inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 blur-xl transition-all duration-500 group-hover:blur-2xl group-hover:scale-110" style={{clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'}}></div>
+              <div
+                className="absolute -z-10 inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 blur-xl transition-all duration-500 group-hover:blur-2xl group-hover:scale-110 rounded-xl"
+              />
             </div>
           </div>
 
           {/* About Content */}
-          <div className="animate-slide-in-left">
+          <div>
             <h3 className="text-2xl font-bold text-foreground mb-6">
               Aditi Yadav
             </h3>
-            
+
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I'm a Computer Science student with a passion for frontend development and an 
-                emerging interest in data analytics. What drives me isn't just the technology 
-                itself, but the potential to create meaningful solutions that connect people 
-                and solve real-world problems.
+                I'm a Computer Science student with a passion for frontend
+                development and an emerging interest in data analytics. What
+                drives me isn't just the technology itself, but the potential to
+                create meaningful solutions that connect people and solve
+                real-world problems.
               </p>
-              
+
               <p>
-                I believe that being a good human comes first – before being a good developer, 
-                teammate, or professional. This philosophy guides everything I do, from how I 
-                approach collaborative projects to the way I design user experiences.
+                I believe that being a good human comes first – before being a
+                good developer, teammate, or professional. This philosophy
+                guides everything I do, from how I approach collaborative
+                projects to the way I design user experiences.
               </p>
-              
+
               <p>
-                Currently pursuing my B.E in Computer Science (graduating in 2027), I'm 
-                constantly exploring new technologies and methodologies.
+                Currently pursuing my B.E in Computer Science (graduating in
+                2027), I'm constantly exploring new technologies and
+                methodologies.
               </p>
-              
+
               <p>
-                When I'm not coding, you'll find me learning something new, collaborating with 
-                peers, or working on projects that make a positive impact. I'm particularly 
-                excited about the intersection of frontend development and data science, and 
-                how these fields can work together to create more intelligent, user-centered 
+                When I'm not coding, you'll find me learning something new,
+                collaborating with peers, or working on projects that make a
+                positive impact. I'm particularly excited about the intersection
+                of frontend development and data science, and how these fields
+                can work together to create more intelligent, user-centered
                 applications.
               </p>
             </div>
 
             {/* Education */}
-            <div className="mt-8 p-6 bg-card rounded-lg border border-border">
-              <h4 className="text-lg font-semibold text-foreground mb-2">Education</h4>
+            <div className="mt-8 p-6 bg-card rounded-xl border border-border shadow-sm">
+              <h4 className="text-lg font-semibold text-foreground mb-2">
+                Education
+              </h4>
               <p className="text-muted-foreground">
-                <span className="font-medium">B.E in Computer Science</span><br />
+                <span className="font-medium">B.E in Computer Science</span>
+                <br />
                 Expected Graduation: 2027
               </p>
             </div>
@@ -102,14 +119,14 @@ const About = () => {
 
         {/* Values Section */}
         <div>
-          <h3 className="text-2xl font-bold text-center text-foreground mb-8">
+          <h3 className="text-2xl font-bold text-center text-foreground mb-12">
             My Values
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <Card
                 key={index}
-                className="p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-card border-border"
+                className="p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 bg-card border-border rounded-xl"
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-8 h-8 text-primary" />

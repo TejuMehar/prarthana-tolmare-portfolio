@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Linkedin, Github, Send, MapPin, Phone, Loader2 } from "lucide-react";
+import { Mail, Linkedin, Github, Send, Loader2 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -68,27 +68,34 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="relative min-h-screen flex items-center pt-20 px-6 
+    <section
+      id="contact"
+      className="relative min-h-screen flex items-center pt-16 md:pt-20 px-4 sm:px-6 lg:px-12 
       bg-gradient-to-b from-[#f8f4ff] via-[#edd7c9]
-      dark:from-[#7198cf] dark:via-[#1e293b] dark:to-[#7198cf]">
+      dark:from-[#7198cf] dark:via-[#1e293b] dark:to-[#7198cf]"
+    >
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Let's Connect
+        {/* Header */}
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Let&apos;s Connect
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            I'm always excited to discuss new opportunities, collaborate on projects, or just have a friendly chat about technology and innovation.
+          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto px-2">
+            I'm always excited to discuss new opportunities, collaborate on projects, 
+            or just have a friendly chat about technology and innovation.
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
+        {/* Grid: form + contact info */}
+        <div className="max-w-6xl mx-auto grid gap-8 lg:gap-12 lg:grid-cols-2">
           {/* Contact Form */}
-          <Card className="p-8 bg-card border-border">
-            <h3 className="text-2xl font-bold text-foreground mb-6">
+          <Card className="p-6 sm:p-8 bg-card border-border">
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-6">
               Send me a message
             </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+              {/* Name */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                   Your Name
@@ -105,6 +112,7 @@ const Contact = () => {
                 />
               </div>
 
+              {/* Email */}
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                   Email Address
@@ -121,6 +129,7 @@ const Contact = () => {
                 />
               </div>
 
+              {/* Message */}
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                   Message
@@ -131,12 +140,13 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Tell me about your project or just say hello!"
-                  rows={6}
+                  rows={5}
                   className="bg-background border-border focus:border-primary resize-none"
                   required
                 />
               </div>
 
+              {/* Submit button */}
               <Button
                 type="submit"
                 disabled={isLoading}
@@ -158,12 +168,12 @@ const Contact = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-8 sm:space-y-10">
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-6">
                 Get in touch
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-8">
+              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
                 Whether you have a project in mind, want to collaborate, or just want to say hi, 
                 I'd love to hear from you. I typically respond within 24 hours.
               </p>
@@ -175,35 +185,34 @@ const Contact = () => {
                 <a
                   key={index}
                   href={contact.href}
-                  target={contact.href.startsWith('http') ? '_blank' : undefined}
-                  rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="flex items-center p-4 bg-card border border-border rounded-lg hover:shadow-md hover:border-primary/50 transition-all duration-300 group"
+                  target={contact.href.startsWith("http") ? "_blank" : undefined}
+                  rel={contact.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="flex items-center p-4 sm:p-5 bg-card border border-border rounded-lg hover:shadow-md hover:border-primary/50 transition-all duration-300 group"
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
-                    <contact.icon className="w-6 h-6 text-primary" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-3 sm:mr-4 group-hover:bg-primary/20 transition-colors">
+                    <contact.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">{contact.label}</p>
-                    <p className="text-muted-foreground">{contact.value}</p>
+                    <p className="font-medium text-foreground text-sm sm:text-base">{contact.label}</p>
+                    <p className="text-muted-foreground text-xs sm:text-sm">{contact.value}</p>
                   </div>
                 </a>
               ))}
             </div>
 
             {/* Availability Note */}
-            <Card className="p-6 bg-gradient-to-r from-primary/5 to-secondary/5 border-primary/20">
-              <h4 className="font-semibold text-foreground mb-2">
+            <Card className="p-5 sm:p-6 bg-gradient-to-r from-primary/5 to-secondary/5 border-primary/20">
+              <h4 className="font-semibold text-foreground mb-2 text-sm sm:text-base">
                 Current Availability
               </h4>
-              <p className="text-muted-foreground text-sm mb-3">
+              <p className="text-muted-foreground text-xs sm:text-sm mb-3">
                 I'm actively looking for new opportunities and exciting projects to work on.
               </p>
-              <div className="flex items-center text-primary text-sm font-medium">
+              <div className="flex items-center text-primary text-xs sm:text-sm font-medium">
                 <div className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></div>
                 Available for new projects
               </div>
             </Card>
-
           </div>
         </div>
       </div>
