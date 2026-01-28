@@ -33,7 +33,7 @@ const Hero = () => {
               </span>
 
               <h1
-                className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4
+                className="text-2xl sm:text-5xl md:text-6xl font-extrabold mb-4
                 bg-gradient-to-r from-primary via-secondary to-primary
                 bg-clip-text text-transparent tracking-tight"
               >
