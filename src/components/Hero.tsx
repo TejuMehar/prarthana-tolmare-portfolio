@@ -125,14 +125,7 @@ const Hero = () => {
           </div>
 
           {/* SCROLL */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <button
-              onClick={() => scrollToSection("#about")}
-              className="text-primary hover:text-primary-hover"
-            >
-              <ChevronDown className="w-8 h-8" />
-            </button>
-          </div>
+
         </div>
       </section>
 
