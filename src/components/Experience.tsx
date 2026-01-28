@@ -4,33 +4,38 @@ import { Card } from "@/components/ui/card";
 const Experience = () => {
   const experiences = [
     {
-      title: "Web Development Intern",
-      company: "Unified Mentor",
-      location: "Remote",
-      period: "Present",
+      title: "US Technical Recruiter",
+      company: "Intigrow Staffing Agency",
+      location: "Remote / US Market",
+      period: "Jan 2025 – Present",
       status: "Current",
       description:
-        "Working on modern web development projects, focusing on React.js and responsive design principles. Contributing to real-world applications and learning industry best practices.",
+        "Managing full-cycle recruitment for technical and non-technical roles in a fast-paced staffing environment, partnering closely with clients and hiring managers to deliver high-quality talent.",
       highlights: [
-        "Developing responsive web applications using React.js",
-        "Collaborating with cross-functional teams",
-        "Implementing modern UI/UX design patterns",
-        "Code review and version control with Git",
+        "Managed end-to-end recruitment from sourcing to onboarding",
+        "Sourced candidates using LinkedIn Recruiter, CareerBuilder, Monster, and internal databases",
+        "Applied advanced Boolean search techniques to identify top talent",
+        "Coordinated and scheduled interviews to ensure a smooth hiring process",
+        "Led offer negotiation and closing in collaboration with account managers",
+        "Maintained candidate pipelines and generated reports and dashboards",
+        "Built strong relationships with hiring managers to align talent strategy with business needs",
+        "Utilized strong interpersonal, communication, and problem-solving skills to meet hiring targets",
       ],
     },
     {
-      title: "AI-ML Virtual Internship",
-      company: "EduSkills/AICTE",
-      location: "Remote",
-      period: "July 2024 - September 2024",
+      title: "Recruiting Coordinator (Intern)",
+      company: "Upgrade Consulting Pvt. Ltd.",
+      location: "India",
+      period: "May 2024 – Aug 2024",
       status: "Completed",
       description:
-        "Intensive program focusing on machine learning algorithms and their practical applications. Gained hands-on experience with Python, data analysis, and cloud platforms.",
+        "Contributed to recruitment operations and research through an academic project focused on the effectiveness of e-recruitment in modern talent acquisition.",
       highlights: [
-        "Implemented various ML algorithms from scratch",
-        "Worked with Python libraries (NumPy, Pandas, Scikit-learn)",
-        "Explored Google Cloud Platform services",
-        "Completed real-world data analysis projects",
+        "Conducted a project titled “A Study on the Effectiveness of Talent Acquisition through E-Recruitment”",
+        "Analyzed the impact of job portals and professional networking platforms like LinkedIn",
+        "Studied how organizations leverage e-recruitment to improve efficiency and reduce hiring costs",
+        "Explored benefits of global talent reach and faster hiring cycles through digital recruitment",
+        "Evaluated how e-recruitment tools enhance candidate quality and hiring outcomes",
       ],
     },
   ];
@@ -38,135 +43,135 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="relative min-h-screen flex items-center pt-20 px-4 sm:px-6 lg:px-12 
-        bg-gradient-to-b from-[#f8f4ff] via-[#edd7c9]
-        dark:from-[#7198cf] dark:via-[#1e293b] dark:to-[#7198cf]"
+      className="relative py-28 px-4 sm:px-6 lg:px-12
+      bg-gradient-to-b from-[#f8f4ff] via-[#edd7c9]/70 to-[#f8f4ff]
+      dark:from-[#0f172a] dark:via-[#1e293b] dark:to-[#0f172a]"
     >
-      <div className="container mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16 px-2">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Experience
+      <div className="container mx-auto max-w-6xl">
+        {/* Header */}
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">
+            Professional Experience
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            My professional journey and learning experiences
+            My journey in recruitment, talent strategy, and people-focused
+            hiring
           </p>
         </div>
 
         {/* Timeline */}
-        <div className="max-w-5xl mx-auto relative">
-          {/* Timeline Line */}
-          <div className="absolute left-6 md:left-1/2 md:transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-primary/20"></div>
+        <div className="relative">
+          <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-primary/20" />
 
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className={`relative flex flex-col md:flex-row ${
+              className={`relative flex flex-col md:flex-row mb-16 ${
                 index % 2 === 0 ? "md:justify-start" : "md:justify-end"
-              } mb-12 animate-fade-in`}
-              style={{ animationDelay: `${index * 0.3}s` }}
+              }`}
             >
-              {/* Timeline Dot */}
-              <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background z-10 animate-pulse hover:scale-125 transition-transform duration-300">
-                <div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75"></div>
-              </div>
+              {/* Dot */}
+              <div
+                className="absolute left-4 md:left-1/2 md:-translate-x-1/2
+                w-4 h-4 bg-primary rounded-full border-4 border-background z-10"
+              />
 
-              {/* Content Card */}
-              <Card
-                className={`w-full md:w-5/12 mt-6 md:mt-0 ml-12 md:ml-0 p-6 bg-card border-border 
-                  hover:shadow-2xl hover:shadow-primary/20 
-                  transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 
-                  group relative overflow-hidden ${
-                    index % 2 === 0
-                      ? "md:mr-auto md:ml-0"
-                      : "md:ml-auto md:mr-0"
-                  }`}
-              >
-                {/* Gradient hover effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-
-                <div className="relative z-10">
-                  {/* Header */}
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-3">
-                    <div>
-                      <h3 className="text-xl font-bold text-foreground mb-1">
-                        {exp.title}
-                      </h3>
-                      <div className="flex items-center text-primary font-medium">
-                        <Building className="w-4 h-4 mr-2" />
-                        {exp.company}
-                      </div>
-                    </div>
-                    <span
-                      className={`px-3 py-1 rounded-full text-xs font-medium w-fit ${
-                        exp.status === "Current"
-                          ? "bg-primary/10 text-primary"
-                          : "bg-secondary text-secondary-foreground"
-                      }`}
-                    >
-                      {exp.status}
-                    </span>
-                  </div>
-
-                  {/* Period & Location */}
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-4 text-muted-foreground">
-                    <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {exp.period}
-                    </div>
-                    <div className="flex items-center">
-                      <MapPin className="w-4 h-4 mr-2" />
-                      {exp.location}
-                    </div>
-                  </div>
-
-                  {/* Description */}
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {exp.description}
-                  </p>
-
-                  {/* Highlights */}
+              {/* Card */}
+   <Card
+  className={`w-full md:w-5/12 ml-12 md:ml-0 mr-3 md:mr-0 p-7 rounded-2xl
+  bg-white/70 dark:bg-white/5 backdrop-blur-md
+  border border-border
+  hover:shadow-2xl hover:-translate-y-2
+  transition-all duration-500 ${
+    index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"
+  }`}
+>
+                {/* Header */}
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-3 mb-4">
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2 flex items-center">
-                      <Award className="w-4 h-4 mr-2" />
-                      Key Highlights
-                    </h4>
-                    <ul className="space-y-1">
-                      {exp.highlights.map((highlight, highlightIndex) => (
-                        <li
-                          key={highlightIndex}
-                          className="text-muted-foreground text-sm flex items-start"
-                        >
-                          <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                          {highlight}
-                        </li>
-                      ))}
-                    </ul>
+                    <h3 className="text-xl font-bold text-foreground">
+                      {exp.title}
+                    </h3>
+                    <div className="flex items-center text-primary font-medium">
+                      <Building className="w-4 h-4 mr-2" />
+                      {exp.company}
+                    </div>
                   </div>
+
+                  <span
+                    className={`px-3 py-1 rounded-full text-xs font-medium w-fit ${
+                      exp.status === "Current"
+                        ? "bg-primary/10 text-primary"
+                        : "bg-secondary text-secondary-foreground"
+                    }`}
+                  >
+                    {exp.status}
+                  </span>
+                </div>
+
+                {/* Meta */}
+                <div className="flex flex-col sm:flex-row gap-3 text-muted-foreground mb-4">
+                  <div className="flex items-center">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    {exp.period}
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="w-4 h-4 mr-2" />
+                    {exp.location}
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  {exp.description}
+                </p>
+
+                {/* Highlights */}
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2 flex items-center">
+                    <Award className="w-4 h-4 mr-2" />
+                    Key Responsibilities & Achievements
+                  </h4>
+                  <ul className="space-y-2">
+                    {exp.highlights.map((item, i) => (
+                      <li
+                        key={i}
+                        className="text-muted-foreground text-sm flex items-start"
+                      >
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-3" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </Card>
             </div>
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16 px-2">
-          <Card className="inline-block p-6 bg-gradient-to-r from-primary/5 to-secondary/5 border-primary/20 max-w-lg">
+        {/* CTA */}
+        <div className="text-center mt-20">
+          <Card
+            className="inline-block p-8 rounded-2xl
+            bg-gradient-to-r from-primary/5 to-secondary/5
+            border border-primary/20"
+          >
             <h3 className="text-lg font-semibold text-foreground mb-2">
-              Looking for New Opportunities
+              Open to New Opportunities
             </h3>
             <p className="text-muted-foreground mb-4">
-              I'm always excited to explore new challenges and learning opportunities
+              Always interested in impactful recruitment and talent strategy
+              roles
             </p>
             <button
-              onClick={() => {
-                const element = document.querySelector("#contact");
-                if (element) element.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="text-primary hover:text-primary-hover font-medium transition-colors"
+              onClick={() =>
+                document
+                  .querySelector("#contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="text-primary font-medium hover:underline"
             >
-              Let's Connect →
+              Let’s Connect →
             </button>
           </Card>
         </div>

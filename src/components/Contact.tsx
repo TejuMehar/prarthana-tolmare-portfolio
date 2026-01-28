@@ -11,7 +11,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
@@ -28,10 +28,11 @@ const Contact = () => {
       });
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error('Email send error:', error);
+      console.error("Email send error:", error);
       toast({
         title: "Failed to Send Message",
-        description: "There was an error sending your message. Please try again or contact me directly.",
+        description:
+          "There was an error sending your message. Please try again or contact me directly.",
         variant: "destructive",
       });
     } finally {
@@ -39,10 +40,12 @@ const Contact = () => {
     }
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -50,21 +53,15 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "aditiyadav2405@gmail.com",
-      href: "mailto:aditiyadav2405@gmail.com"
+      value: "prarthanatolmare371@gmail.com",
+      href: "mailto:prarthanatolmare371@gmail.com",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "aditi-yadav2405",
-      href: "https://linkedin.com/in/aditi-yadav2405"
+      value: "Prarthana Tolmare",
+      href: "https://www.linkedin.com/in/prarthana-tolmare-7040782b1/",
     },
-    {
-      icon: Github,
-      label: "GitHub",
-      value: "Aditi-y",
-      href: "https://github.com/Aditi-y"
-    }
   ];
 
   return (
@@ -81,8 +78,9 @@ const Contact = () => {
             Let&apos;s Connect
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto px-2">
-            I'm always excited to discuss new opportunities, collaborate on projects, 
-            or just have a friendly chat about technology and innovation.
+            I'm always excited to discuss new opportunities, collaborate on
+            projects, or just have a friendly chat about technology and
+            innovation.
           </p>
         </div>
 
@@ -93,11 +91,14 @@ const Contact = () => {
             <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-6">
               Send me a message
             </h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
               {/* Name */}
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Your Name
                 </label>
                 <Input
@@ -114,7 +115,10 @@ const Contact = () => {
 
               {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Email Address
                 </label>
                 <Input
@@ -131,7 +135,10 @@ const Contact = () => {
 
               {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Message
                 </label>
                 <Textarea
@@ -174,8 +181,9 @@ const Contact = () => {
                 Get in touch
               </h3>
               <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
-                Whether you have a project in mind, want to collaborate, or just want to say hi, 
-                I'd love to hear from you. I typically respond within 24 hours.
+                Whether you have a project in mind, want to collaborate, or just
+                want to say hi, I'd love to hear from you. I typically respond
+                within 24 hours.
               </p>
             </div>
 
@@ -185,16 +193,26 @@ const Contact = () => {
                 <a
                   key={index}
                   href={contact.href}
-                  target={contact.href.startsWith("http") ? "_blank" : undefined}
-                  rel={contact.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  target={
+                    contact.href.startsWith("http") ? "_blank" : undefined
+                  }
+                  rel={
+                    contact.href.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
                   className="flex items-center p-4 sm:p-5 bg-card border border-border rounded-lg hover:shadow-md hover:border-primary/50 transition-all duration-300 group"
                 >
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-3 sm:mr-4 group-hover:bg-primary/20 transition-colors">
                     <contact.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground text-sm sm:text-base">{contact.label}</p>
-                    <p className="text-muted-foreground text-xs sm:text-sm">{contact.value}</p>
+                    <p className="font-medium text-foreground text-sm sm:text-base">
+                      {contact.label}
+                    </p>
+                    <p className="text-muted-foreground text-xs sm:text-sm">
+                      {contact.value}
+                    </p>
                   </div>
                 </a>
               ))}
@@ -206,7 +224,8 @@ const Contact = () => {
                 Current Availability
               </h4>
               <p className="text-muted-foreground text-xs sm:text-sm mb-3">
-                I'm actively looking for new opportunities and exciting projects to work on.
+                I'm actively looking for new opportunities and exciting projects
+                to work on.
               </p>
               <div className="flex items-center text-primary text-xs sm:text-sm font-medium">
                 <div className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></div>
